@@ -1,0 +1,10 @@
+sim_time: 329.224
+model_names: 
+  - floor
+  - ur_base
+  - cafe_table
+  - cube
+  - robot
+rendering_enabled: True
+success: True
+status_message: "GetWorldProperties: got properties"

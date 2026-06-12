@@ -1,0 +1,95 @@
+Import ur_ikfast not available, IKFAST would not be supported without it
+[INFO] [1781264009.012477, 0.000000]: Using filtered FT topic: /wrench/filtered
+[92mInitializing ur robot with parameters[0m
+[92mgripper: GripperType.GENERIC, ft_sensor_topic: wrench, 
+base_link: base_link, ee_link: tool0[0m
+[INFO] [1781264011.141000, 156.609000]: JointTrajectoryController initialized. ns: /
+[INFO] [1781264011.359840, 156.781000]: GripperCommandAction initialized. ns: /
+[INFO] [1781264011.519989, 156.916000]: Auto-selected cube model: cube
+[INFO] [1781264011.528541, 156.920000]: Task: (1) table grasp (2) XY drag z fixed (3) Fz=5.00 N | cube=cube::link side=0.020m
+[INFO] [1781264012.712085, 157.854000]: Grasp target link: cube::link
+[INFO] [1781264012.909379, 157.999000]: Cube cube pose [gazebo:robot::base_link]: [0.0, 0.29, 0.104]
+[INFO] [1781264012.912193, 157.999000]: Cube cube pose [gazebo:base_link]: [0.0, 0.29, 0.104]
+[INFO] [1781264012.915862, 158.002000]: Cube cube pose [gazebo:robot]: [0.0, 0.29, 0.104]
+[INFO] [1781264012.918490, 158.002000]: Cube cube pose [gazebo:world]: [0.4, -0.0, 0.794]
+[INFO] [1781264012.929513, 158.014000]: Cube cube pose [tf:world]: [0.4, -0.0, 0.794]
+[INFO] [1781264012.933912, 158.016000]: Cube cube center in base_link (gazebo:robot::base_link): [0.0, 0.29, 0.104]
+[INFO] [1781264014.759480, 159.549000]: Grasp tool0->gripper_tip offset (base_link): [-0.0001, 0.0451, -0.1411]
+[INFO] [1781264014.773755, 159.556000]: Grasp tool0->gripper_tip offset (base_link): [-0.0001, 0.0451, -0.1411]
+[INFO] [1781264014.783188, 159.564000]: Grasp tool0->gripper_tip offset (base_link): [-0.0001, 0.0451, -0.1411]
+[INFO] [1781264014.793676, 159.574000]: Grasp plan: cube center [0.0, 0.29, 0.104] tool0 xy (0.000,0.245) z 0.285->0.245
+[INFO] [1781264014.797058, 159.576000]:   start EE xyz=[-0.1124, 0.3095, 0.4086], xy err vs cube=0.1297 m
+[INFO] [1781264018.610015, 162.647000]:   coarse IK above cube EE xyz=[0.0001, 0.2449, 0.4086], xy err vs cube=0.0000 m
+[INFO] [1781264020.493325, 164.164000]:   fine align iter 0: tip_xy err=0.0226 m
+[INFO] [1781264021.844921, 165.283000]:   fine align iter 1: tip_xy err=0.0034 m
+[INFO] [1781264021.849651, 165.284000]:   XY above cube EE xyz=[-0.0001, 0.2641, 0.2851], xy err vs cube=0.0192 m
+[INFO] [1781264022.544644, 165.860000]:   fine align iter 0: tip_xy err=0.0034 m
+[INFO] [1781264022.547751, 165.863000]:   at grasp height EE xyz=[-0.0001, 0.2641, 0.2451], xy err vs cube=0.0192 m
+[INFO] [1781264022.554315, 165.867000]: Grasp align OK: gripper_tip_vs_cube=0.0034 m, tool0 xy_err=0.0192 m, z_err=0.0000 m, gripper_tip xy vs cube=0.0034 m
+[INFO] [1781264022.559198, 165.869000]: At grasp: tool0 z=0.2451 target z=0.2451 | tip z=0.0987 cube z=0.1040
+[INFO] [1781264022.561353, 165.871000]: Gentle grasp close (no downward force — joint hold only).
+[INFO] [1781264024.844019, 167.691000]: Soft close: pre=0.054 attach=0.050 final=0.024 m, max_effort=6.0 N, 3 steps
+[INFO] [1781264028.482544, 170.612000]: Attached cube::link to robot::wrist_3_link (gap 0.050 m, effort 6.0 N).
+[INFO] [1781264030.025249, 171.836000]:   soft close 1/2 gap=0.041 m (stop at 67% steps)
+[INFO] [1781264031.917344, 173.135000]:   soft close 2/2 gap=0.033 m (stop at 67% steps)
+[INFO] [1781264042.689982, 180.779000]: Grasp done at z=0.2531, ready for XY slide.
+[INFO] [1781264056.489399, 190.383000]: Wrench stable before slide |F|=3.79 N
+[INFO] [1781264056.498665, 190.383000]: Sim wrench clamp: |F|<=50 N, |T|<=8 Nm
+[INFO] [1781264056.504194, 190.395000]: Slide wrench low-pass alpha=0.12
+[INFO] [1781264056.509006, 190.399000]: Slide FT: using Z axis only for force control.
+[INFO] [1781264056.517351, 190.404000]: Table slide hybrid: 24 pts, Fz=5.00 N (sim default 8 N), z_ref=0.2531, side=0.020m
+[INFO] [1781264056.537051, 190.413000]: Hybrid slide: 24 waypoints, 40.0s, ~1.67s/pt, Fz_des=5.00 N
+[INFO] [1781264056.548664, 190.421000]: Track t=0.0s | pos des/act xyz=[0.0099, 0.2575, 0.2531] / [-0.0001, 0.2641, 0.2531] err=0.0120m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, -0.196] err=5.196N
+[INFO] [1781264059.653385, 192.432000]: Track t=2.0s | pos des/act xyz=[0.0099, 0.2608, 0.2531] / [0.0098, 0.2595, 0.2588] err=0.0058m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, -0.399] err=5.399N
+[INFO] [1781264062.745496, 194.450000]: Track t=4.0s | pos des/act xyz=[0.0099, 0.2641, 0.2531] / [0.01, 0.2639, 0.2527] err=0.0005m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, -40.031] err=45.031N
+[INFO] [1781264065.825698, 196.450000]: Track t=6.0s | pos des/act xyz=[0.0099, 0.2675, 0.2531] / [0.0099, 0.2673, 0.2494] err=0.0037m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, 16.513] err=11.513N
+[INFO] [1781264068.938761, 198.450000]: Track t=8.0s | pos des/act xyz=[0.0099, 0.2708, 0.2531] / [0.0101, 0.2709, 0.2537] err=0.0006m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, 37.842] err=32.842N
+[INFO] [1781264072.197506, 200.451000]: Track t=10.0s | pos des/act xyz=[0.0099, 0.2741, 0.2531] / [0.01, 0.2742, 0.2519] err=0.0012m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, -34.129] err=39.129N
+[INFO] [1781264075.589980, 202.451000]: Track t=12.0s | pos des/act xyz=[0.0033, 0.2741, 0.2531] / [0.0047, 0.2743, 0.2559] err=0.0032m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, 18.367] err=13.367N
+[INFO] [1781264078.979906, 204.452000]: Track t=14.0s | pos des/act xyz=[-0.0001, 0.2741, 0.2531] / [0.0005, 0.2744, 0.2493] err=0.0038m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, 5.571] err=0.571N
+[INFO] [1781264082.320686, 206.453000]: Track t=16.0s | pos des/act xyz=[-0.0034, 0.2741, 0.2531] / [-0.0032, 0.2743, 0.2578] err=0.0047m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, -8.433] err=13.433N
+[INFO] [1781264085.545710, 208.462000]: Track t=18.0s | pos des/act xyz=[-0.0067, 0.2741, 0.2531] / [-0.0065, 0.2744, 0.25] err=0.0031m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, 21.898] err=16.898N
+[INFO] [1781264088.753624, 210.468000]: Track t=20.0s | pos des/act xyz=[-0.0101, 0.2741, 0.2531] / [-0.01, 0.2742, 0.2584] err=0.0054m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, -16.718] err=21.718N
+[INFO] [1781264092.069667, 212.483000]: Track t=22.1s | pos des/act xyz=[-0.0101, 0.2675, 0.2531] / [-0.0099, 0.2692, 0.2514] err=0.0024m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, 32.105] err=27.105N
+[INFO] [1781264095.231318, 214.488000]: Track t=24.1s | pos des/act xyz=[-0.0101, 0.2641, 0.2531] / [-0.01, 0.2646, 0.2565] err=0.0035m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, -29.5] err=34.500N
+[INFO] [1781264098.279284, 216.488000]: Track t=26.1s | pos des/act xyz=[-0.0101, 0.2608, 0.2531] / [-0.0099, 0.2611, 0.2502] err=0.0029m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, 21.754] err=16.754N
+[INFO] [1781264101.311220, 218.488000]: Track t=28.1s | pos des/act xyz=[-0.0101, 0.2575, 0.2531] / [-0.01, 0.2576, 0.2586] err=0.0056m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, 15.827] err=10.827N
+[INFO] [1781264104.524124, 220.489000]: Track t=30.1s | pos des/act xyz=[-0.0101, 0.2541, 0.2531] / [-0.01, 0.2542, 0.2525] err=0.0006m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, -30.941] err=35.941N
+[INFO] [1781264107.500980, 222.491000]: Track t=32.1s | pos des/act xyz=[-0.0034, 0.2541, 0.2531] / [-0.0054, 0.2544, 0.2511] err=0.0028m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, 30.854] err=25.854N
+[INFO] [1781264110.609446, 224.505000]: Track t=34.1s | pos des/act xyz=[-0.0001, 0.2541, 0.2531] / [-0.0007, 0.2542, 0.2589] err=0.0058m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, -0.448] err=5.448N
+[INFO] [1781264113.671813, 226.521000]: Track t=36.1s | pos des/act xyz=[0.0033, 0.2541, 0.2531] / [0.0031, 0.2542, 0.2524] err=0.0007m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, -34.723] err=39.723N
+[INFO] [1781264116.797504, 228.522000]: Track t=38.1s | pos des/act xyz=[0.0066, 0.2541, 0.2531] / [0.0067, 0.2543, 0.2518] err=0.0013m | F des/act xyz=[0.0, 0.0, 5.0] / [0.0, 0.0, 35.672] err=30.672N
+[INFO] [1781264123.208719, 232.887000]: Saved position plot: /home/robot/ur3_sim/task_plots/table_slide_230_position.png
+[INFO] [1781264123.214679, 232.894000]: Saved force plot: /home/robot/ur3_sim/task_plots/table_slide_230_force.png
+[WARN] [1781264119.783515, 230.428000]: Total # of commands ignored: {<ExecutionResult.SPEED_LIMIT_EXCEEDED: 'speed_limit_exceeded'>: 0, <ExecutionResult.IK_NOT_FOUND: 'ik_not_found'>: 0}
+[INFO] [1781264123.217438, 232.895000]: Task logging: 2497 samples recorded.
+[INFO] [1781264007.140449, 153.409000]: ============================================================
+[INFO] [1781264007.143171, 153.412000]: [STATE] INIT
+[INFO] [1781264007.145340, 153.412000]: ============================================================
+[INFO] [1781264007.147738, 153.417000]: ============================================================
+[INFO] [1781264007.150791, 153.419000]: [STATE] CHECK_GAZEBO
+[INFO] [1781264007.153594, 153.422000]: ============================================================
+[INFO] [1781264007.184178, 153.441000]: Gazebo models: ['floor', 'ur_base', 'cafe_table', 'cube', 'robot']
+[INFO] [1781264007.187103, 153.445000]: ============================================================
+[INFO] [1781264007.189943, 153.446000]: [STATE] CHECK_CONTROLLERS
+[INFO] [1781264007.194491, 153.449000]: ============================================================
+[INFO] [1781264007.217757, 153.467000]: Controller: joint_state_controller              state=running type=joint_state_controller/JointStateController
+[INFO] [1781264007.220595, 153.470000]: Controller: scaled_pos_joint_traj_controller    state=running type=position_controllers/JointTrajectoryController
+[INFO] [1781264007.222265, 153.471000]: Controller: gripper_controller                  state=running type=position_controllers/GripperActionController
+[INFO] [1781264007.223780, 153.473000]: ============================================================
+[INFO] [1781264007.227441, 153.478000]: [STATE] CHECK_WRENCH
+[INFO] [1781264007.229210, 153.479000]: ============================================================
+[INFO] [1781264007.266264, 153.508000]: FT ready: Fz=1.070
+[INFO] [1781264007.269011, 153.511000]: ============================================================
+[INFO] [1781264007.271369, 153.514000]: [STATE] RUN_GRASP_TASK
+[INFO] [1781264007.273213, 153.515000]: ============================================================
+[INFO] [1781264007.275555, 153.515000]: Executing: rosrun ur_control compliance_controller_example.py -f --sim --table-side 0.02 --table-duration 40 --target-force-z 5 _task_plot_dir:=/home/robot/ur3_sim/task_plots _task_save_plots:=true
+[INFO] [1781264123.982167, 233.410000]: Low-level grasp task finished successfully.
+[INFO] [1781264123.987671, 233.411000]: ============================================================
+[INFO] [1781264123.992037, 233.411000]: [STATE] VERIFY_RESULT
+[INFO] [1781264123.994454, 233.421000]: ============================================================
+[INFO] [1781264123.997934, 233.423000]: Position plots: ['table_slide_230_position.png', 'table_slide_475_position.png', 'table_slide_865_position.png']
+[INFO] [1781264123.999969, 233.427000]: Force plots: ['table_slide_230_force.png', 'table_slide_475_force.png', 'table_slide_865_force.png']
+[INFO] [1781264124.003998, 233.430000]: ============================================================
+[INFO] [1781264124.006155, 233.433000]: [STATE] DONE
+[INFO] [1781264124.008214, 233.433000]: ============================================================

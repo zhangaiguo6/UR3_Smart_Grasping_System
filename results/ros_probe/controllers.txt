@@ -1,0 +1,32 @@
+controller: 
+  - 
+    name: "joint_state_controller"
+    state: "running"
+    type: "joint_state_controller/JointStateController"
+    claimed_resources: 
+      - 
+        hardware_interface: "hardware_interface::JointStateInterface"
+        resources: []
+  - 
+    name: "scaled_pos_joint_traj_controller"
+    state: "running"
+    type: "position_controllers/JointTrajectoryController"
+    claimed_resources: 
+      - 
+        hardware_interface: "hardware_interface::PositionJointInterface"
+        resources: 
+          - elbow_joint
+          - shoulder_lift_joint
+          - shoulder_pan_joint
+          - wrist_1_joint
+          - wrist_2_joint
+          - wrist_3_joint
+  - 
+    name: "gripper_controller"
+    state: "running"
+    type: "position_controllers/GripperActionController"
+    claimed_resources: 
+      - 
+        hardware_interface: "hardware_interface::PositionJointInterface"
+        resources: 
+          - finger_joint
